@@ -23,9 +23,9 @@ public class Teacher extends Person{
     @Override
     public String introduce(){
         if(getNoClass()){
-            return "My name is "+getName()+". I am "+ getAge()+" years old. I am a Teacher. I teach No Class.";
+            return super.introduce() + " I am a Teacher. I teach No Class.";
         }else{
-            return "My name is "+getName()+". I am "+ getAge()+" years old. I am a Teacher. I teach Class "+getKlass()+".";
+            return super.introduce() + " I am a Teacher. I teach Class "+getKlass()+".";
         }
 
     }

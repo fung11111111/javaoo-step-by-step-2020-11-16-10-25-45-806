@@ -31,18 +31,18 @@ public class Teacher extends Person{
     @Override
     public String introduce(){
         if(getNoClass()){
-            return "My name is "+getName()+". I am "+ getAge()+" years old. I am a Teacher. I teach No Class.";
+            return super.introduce() + " I am a Teacher. I teach No Class.";
         }else{
-            return "My name is "+getName()+". I am "+ getAge()+" years old. I am a Teacher. I teach Class "+getKlass().getNumber()+".";
+            return super.introduce() + " I am a Teacher. I teach Class "+getKlass().getNumber()+".";
         }
 
     }
 
     public String introduceWith(Student jerry) {
         if (getKlass().equals(jerry.getKlass())){
-            return "My name is "+getName()+". I am "+ getAge()+" years old. I am a Teacher. I teach "+jerry.getName()+".";
+            return super.introduce() + " I am a Teacher. I teach "+jerry.getName()+".";
         }else{
-            return "My name is "+getName()+". I am "+ getAge()+" years old. I am a Teacher. I don't teach "+jerry.getName()+".";
+            return super.introduce() + " I am a Teacher. I don't teach "+jerry.getName()+".";
         }
 
     }
